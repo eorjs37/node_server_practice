@@ -23,11 +23,9 @@ app.get('/api/list', (req, res) => {
     res.json([{ id: 1, username: "daisy" }])
 });
 io.on('connection', (socket) => {
-    console.log('a user connected');
+    console.log(`${socket.handshake.query['user']} connected`);
 
-
-
-    socket.on("chat message", (msg) => {
+    socket.on("chatmessage", (msg) => {
         console.log("msg : ", msg);
         setTimeout(() => {
             socket.emit("send", "반갑습니다.")

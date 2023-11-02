@@ -1,16 +1,17 @@
 {
-  "name": "node_server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "CHOI DAE GEON",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "socket.io": "^4.7.2"
-  }
+    "name": "node_server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "serve": "pm2 start app.js --watch && pm2 log",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "CHOI DAE GEON",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "socket.io": "^4.7.2"
+    }
 }
